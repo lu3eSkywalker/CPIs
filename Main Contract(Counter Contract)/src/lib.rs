@@ -20,7 +20,6 @@ fn process_instruction(
 ) -> ProgramResult {
     let mut iter = accounts.iter();
     let data_account = next_account_info(&mut iter)?;
-    let user_account = next_account_info(&mut iter)?;
 
     let mut counter = OnChainData::try_from_slice(&data_account.data.borrow())?;
 
